@@ -9,8 +9,8 @@
   "license": "MIT",
   "homepage": "https://github.com/Deilan/rxjs-6-playground",
   "scripts": {
-    "serve": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "serve": "webpack-dev-server --config webpack.config.development.js --env.NODE_ENV=development",
+    "build": "webpack --config webpack.config.production.js --env.NODE_ENV=production"
   },
   "devDependencies": {
     "html-webpack-plugin": "3.2.0",

@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require(`html-webpack-plugin`);
 
-module.exports = {
+module.exports = env => ({
   resolve: {
     extensions: [`.ts`, `.js`]
   },
@@ -8,9 +8,14 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        use: `ts-loader`
+        loader: `ts-loader`,
+        options: {
+          configFile: env.NODE_ENV
+            ? `tsconfig.${env.NODE_ENV}.json`
+            : `tsconfig.json`
+        }
       }
     ]
   },
   plugins: [new HtmlWebpackPlugin({ template: `./src/index.html` })]
-};
+});
