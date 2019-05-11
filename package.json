@@ -1,0 +1,11 @@
+{
+  "name": "rxjs-6-playground",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deilan/rxjs-6-playground.git"
+  },
+  "author": "deilan",
+  "license": "MIT",
+  "homepage": "https://github.com/Deilan/rxjs-6-playground"
+}
