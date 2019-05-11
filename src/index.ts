@@ -1,5 +1,9 @@
+import { of } from 'rxjs';
+
 function greet(msg: string): void {
   console.log(msg);
 }
 
-greet(`Hello World!`);
+of(`Hello World!`).subscribe((data) => greet(data));
+
+
