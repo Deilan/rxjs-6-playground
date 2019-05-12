@@ -7,6 +7,13 @@ module.exports = env => ({
   module: {
     rules: [
       {
+        test: /\.html$/,
+        loader: 'html-loader',
+        options: {
+          minimize: env.NODE_ENV === `production`
+        }
+      },
+      {
         test: /\.ts$/,
         loader: `ts-loader`,
         options: {
